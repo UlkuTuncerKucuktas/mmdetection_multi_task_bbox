@@ -228,6 +228,7 @@ class Resize(MMCV_Resize):
         else:
             img_shape = results['img'].shape[:2]
             results['scale'] = _scale_size(img_shape[::-1], self.scale_factor)
+       
         self._resize_img(results)
         self._resize_bboxes(results)
         self._resize_masks(results)
